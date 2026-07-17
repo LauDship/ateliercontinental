@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection | Atelier Continental</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Consistent Navigation Link Structure -->
+    <header>
+        <div class="logo">
+            <h1>Atelier Continental</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Collection</a></li>
+                <li><a href="trustees.html">Board of Trustees</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Required Marquee -->
+    <div class="announcement-marquee">
+        <marquee behavior="scroll" direction="left">
+            ✨ Atelier Continental Autumn Showcase: October 15th • Private bookings now open • Free worldwide shipping on luxury orders ✨
+        </marquee>
+    </div>
+
+    <!-- Product Showcase Section -->
+    <main class="product-section">
+        <h2>The Autumn/Winter Collection</h2>
+        
+        <!-- Interactive JS Filter Buttons -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Pieces</button>
+            <button class="filter-btn" data-filter="apparel">Apparel</button>
+            <button class="filter-btn" data-filter="accessories">Accessories</button>
+        </div>
+
+        <!-- Grid of Products -->
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card" data-category="apparel">
+                <img src="images/overcoat.jpg" alt="The Continental Wool Overcoat" class="product-image">
+                <div class="product-category">Apparel</div>
+                <h3>The Continental Wool Overcoat</h3>
+                <p class="product-price">₦450,000</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="accessories">
+                <img src="images/tote.jpg" alt="Atelier Monogram Tote" class="product-image">
+                <div class="product-category">Accessories</div>
+                <h3>Atelier Monogram Tote</h3>
+                <p class="product-price">₦320,000</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="apparel">
+                <img src="images/gown.jpg" alt="Satin Evening Gown" class="product-image">
+                <div class="product-category">Apparel</div>
+                <h3>Satin Evening Gown</h3>
+                <p class="product-price">₦580,000</p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="accessories">
+                <img src="images/scarf.jpg" alt="Milanese Silk Scarf" class="product-image">
+                <div class="product-category">Accessories</div>
+                <h3>Milanese Silk Scarf</h3>
+                <p class="product-price">₦85,000</p>
+            </div>
+
+        </div>
+
+        </div>
+    </main>
+
+    <footer>
+    <p>&copy; 2026 Atelier Continental. All Rights Reserved. Designed by Daniel Akala - 2025/A/IT/0064 - 301830405</p>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

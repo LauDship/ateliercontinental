@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board of Trustees | Atelier Continental</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Consistent Navigation Link Structure -->
+    <header>
+        <div class="logo">
+            <h1>Atelier Continental</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Collection</a></li>
+                <li><a href="trustees.html" class="active">Board of Trustees</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Required Marquee -->
+    <div class="announcement-marquee">
+        <marquee behavior="scroll" direction="left">
+            ✨ Atelier Continental Autumn Showcase: October 15th • Private bookings now open • Free worldwide shipping on luxury orders ✨
+        </marquee>
+    </div>
+
+    <!-- Trustees Section -->
+    <main class="trustees-section">
+        <h2>The Board of Trustees</h2>
+        <p class="trustees-subtitle">The visionary minds steering our global style architecture.</p>
+        
+        <div class="trustees-grid">
+            
+            <!-- Trustee 1: Daniel -->
+            <div class="trustee-card" onclick="openBio('Daniel Akala', 'Chief Executive', 'Daniel steers the overarching commercial vision, brand alignment, and global development frameworks for the fashion house.')">
+                <img src="images/Daniel.jpg" alt="Daniel Akala" class="trustee-photo">
+                <h3>Daniel Akala</h3>
+                <p class="trustee-role">Chief Executive</p>
+            </div>
+
+            <!-- Trustee 2: Esther -->
+            <div class="trustee-card" onclick="openBio('Esther Ladipo', 'Creative Director / Vice Chair', 'Esther spearheads the creative direction, seasonal concepts, and structural design aesthetics for all couture collections.')">
+                <img src="images/Esther.png" alt="Esther Ladipo" class="trustee-photo">
+                <h3>Esther Ladipo</h3>
+                <p class="trustee-role">Creative Director / Vice Chair</p>
+            </div>
+
+            <!-- Trustee 3: Bolu -->
+            <div class="trustee-card" onclick="openBio('Bolu Modupe', 'Financial Officer', 'Bolu manages the luxury house\'s capital allocation, financial scaling, and commercial garment investment strategies.')">
+                <img src="images/Bolu.png" alt="Bolu Modupe" class="trustee-photo">
+                <h3>Bolu Modupe</h3>
+                <p class="trustee-role">Financial Officer</p>
+            </div>
+
+            <!-- Trustee 4: Nenye -->
+            <div class="trustee-card" onclick="openBio('Nenye Royalty', 'Chief Technical Officer', 'Nenye oversees our digital ecosystem integration, computational pattern assets, and high-performance retail architecture.')">
+                <img src="images/Nenye.png" alt="Nenye Royalty" class="trustee-photo">
+                <h3>Nenye Royalty</h3>
+                <p class="trustee-role">Chief Technical Officer</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Interactive JS Modal Window for Bios -->
+    <div id="bioModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBio()">&times;</span>
+            <h3 id="modalName">Name</h3>
+            <p id="modalRole" style="text-transform: uppercase; font-size: 0.8rem; color:#888; letter-spacing:1px; margin-bottom:1rem;"></p>
+            <p id="modalText">Biography details...</p>
+        </div>
+    </div>
+
+   <footer>
+    <p>&copy; 2026 Atelier Continental. All Rights Reserved. Designed by Daniel Akala - 2025/A/IT/0064 - 301830405</p>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

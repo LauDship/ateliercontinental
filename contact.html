@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiries & Appointments | Atelier Continental</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Consistent Navigation Link Structure -->
+    <header>
+        <div class="logo">
+            <h1>Atelier Continental</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Collection</a></li>
+                <li><a href="trustees.html">Board of Trustees</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html" class="active">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Required Marquee -->
+    <div class="announcement-marquee">
+        <marquee behavior="scroll" direction="left">
+            ✨ Atelier Continental Autumn Showcase: October 15th • Private bookings now open • Free worldwide shipping on luxury orders ✨
+        </marquee>
+    </div>
+
+    <!-- Main Section -->
+    <main class="contact-section">
+        <h2>Inquiries & Appointments</h2>
+        <p class="contact-info">
+            For bespoke tailoring, bridal services, or general consulting, email us directly at <br>
+            <a href="mailto:inquiries@ateliercontinental.com">inquiries@ateliercontinental.com</a> or use the concierge form below.
+        </p>
+
+        <!-- Booking Form -->
+        <form id="appointmentForm" class="appointment-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="clientEmail">Email Address</label>
+                <input type="email" id="clientEmail" required placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="serviceType">Service Requested</label>
+                <select id="serviceType" required>
+                    <option value="">Select a service...</option>
+                    <option value="Bespoke Suit/Overcoat Fitting">Bespoke Suit / Overcoat Fitting</option>
+                    <option value="Haute Couture Evening Gown Consultation">Haute Couture Evening Gown Consultation</option>
+                    <option value="General Brand Inquiry">General Brand Inquiry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Special Requirements / Notes</label>
+                <textarea id="notes" rows="4" placeholder="Share any specific preferences, measurements, or timing constraints..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Reservation</button>
+        </form>
+
+        <!-- Hidden custom success card revealed via JavaScript -->
+        <div id="formSuccess" class="success-box">
+            <h4>Reservation Request Received</h4>
+            <p style="font-family: sans-serif; font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+                Thank you. The concierge desk at Atelier Continental will review your details and connect with you via email within 24 business hours.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+    <p>&copy; 2026 Atelier Continental. All Rights Reserved. Designed by Daniel Akala - 2025/A/IT/0064 - 301830405</p>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

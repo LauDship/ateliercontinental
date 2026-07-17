@@ -1,0 +1,494 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* Header & Logo */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Navigation Link Structure */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* The Marquee (Required on all pages) */
+.announcement-marquee {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/hero.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.5rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    border: 1px solid #ffffff;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* Page Content Padding */
+.container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    background-color: #111111;
+    color: #888888;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4rem;
+}
+/* Product Showcase Styles */
+.product-section {
+    padding: 3rem 5%;
+}
+
+.product-section h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Category Filter Buttons */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: #777;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* Responsive Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    padding: 1rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Real Image Styling for Products */
+.product-image {
+    width: 100%;
+    height: 380px; /* Consistent height for all product images */
+    object-fit: cover; /* Crops the images cleanly without stretching them */
+    background-color: #f5f5f5; /* Fallback background color while loading */
+    margin-bottom: 1rem;
+    border: 1px solid #f0f0f0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    opacity: 0.9; /* Soft visual feedback on hover */
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #222;
+}
+/* Board of Trustees Styles */
+.trustees-section {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.trustees-section h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.trustees-subtitle {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+/* Grid Layout for Members */
+.trustees-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.trustee-card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+    width: 280px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.trustee-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.trustee-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Keeps photos beautifully cropped without stretching */
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 1.5rem;
+    background-color: #f7f7f7; /* Fallback background color */
+}
+.trustee-card h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+
+.trustee-role {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: left;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* Inquiries & Appointments Styles */
+.contact-section {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    text-align: center;
+    color: #777;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+}
+
+/* Form Layout */
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.submit-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: #000000;
+}
+
+/* Form Success Message Box */
+.success-box {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #000;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.success-box h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+/* Upcoming Events Styles */
+.events-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.events-section h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+/* Event Cards Layout */
+.event-card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-left: 4px solid #000; /* Sophisticated accent line */
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateX(5px);
+}
+
+.event-date {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    font-weight: 700;
+}
+
+.event-card h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.event-location {
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Countdown Clock Styling */
+.countdown-container {
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.countdown-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+#countdown-display {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000;
+}
